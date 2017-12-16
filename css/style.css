@@ -1,0 +1,61 @@
+body {
+  font-family: Open Sans, serif;
+}
+
+.section__title {
+  display: block;
+  text-align: center;
+
+}
+.section__title:after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 5px;
+  background-color: #000;
+  margin: 0 auto;
+
+}
+.container {
+  width: 320px;
+  margin: 0 auto;
+}
+.header {
+  display: flex;
+}
+.topline {
+  display: flex;
+  justify-content: space-between;
+  min-width: 320px;
+  background: #555;
+}
+.links__time {
+  display: none;
+}
+.links__adress {
+  display: none;
+}
+.logo {
+  display: none;
+}
+.mobile-menu-btn {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+}
+.nav--mobile {
+  display: none;
+}
+.nav__item {
+  width: 100%;
+}
+.promo {
+  display: flex;
+}
+.promo__text {
+  display: none;
+}
+
+.btn--header {
+  
+}
