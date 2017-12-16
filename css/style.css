@@ -1,61 +1,109 @@
 body {
   font-family: Open Sans, serif;
+  margin: 0;
 }
 
-.section__title {
-  display: block;
-  text-align: center;
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
 
-}
-.section__title:after {
-  content: '';
-  display: block;
-  width: 30px;
-  height: 5px;
-  background-color: #000;
-  margin: 0 auto;
-
-}
-.container {
-  width: 320px;
-  margin: 0 auto;
-}
-.header {
-  display: flex;
-}
 .topline {
+  width: 100%;
+  display: block;
+  background-color: #e9e9f1;
+}
+
+.topline__inner {
   display: flex;
   justify-content: space-between;
-  min-width: 320px;
-  background: #555;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
+.mobile-menu-btn {}
 .links__time {
   display: none;
 }
 .links__adress {
   display: none;
 }
+.header__inner {
+  display: block;
+  position: relative;
+}
+
+.burger-btn {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+.burger-btn:before,
+.burger-btn:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 4px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.burger-btn:before {
+  top: 5px;
+}
+
+.burger-btn:after {
+  bottom: 5px;
+}
+
+.burger-btn__dot {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.burger-btn__dot:befor {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #000;
+}
 .logo {
   display: none;
 }
-.mobile-menu-btn {
-  width: 20px;
-  height: 20px;
-  background-color: red;
-}
-.nav--mobile {
-  display: none;
-}
-.nav__item {
+
+.header__nav {
+  position: absolute;
+  top: 0;
   width: 100%;
-}
-.promo {
-  display: flex;
-}
-.promo__text {
-  display: none;
+  left: 0;
+  background-color: lightgray;
+  padding: 40px 0;
+  text-align: center;
 }
 
 .btn--header {
-  
+  display: none;
+}
+.promo {
+  text-align: center;
+}
+.promo__text {
+  display: none;
 }
