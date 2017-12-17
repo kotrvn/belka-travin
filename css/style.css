@@ -9,6 +9,51 @@ ul {
   list-style: none;
 }
 
+h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+.links{
+  background-image: url(../img/spr);
+  background-repeat: no-repeat;
+  display: block;
+}
+.section__title {
+  text-align: center;
+  font-family: Montserrat, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 24px;
+  color: #000;
+}
+.section__title:after {
+  content: '';
+  display: block;
+  margin: 15px auto 0;
+  width: 94px;
+  height: 2px;
+  background-color: #000;
+}
+.section__title--white {
+  color: #fff;
+}
+.section__title--white:after {
+  background-color: #fff;
+}
+.section__inner {
+  padding: 0 15px;
+}
+
+/* Header */
+.header__inner {
+  padding-top: 40px;
+  padding-bottom: 100px;
+  background-image: url(../img/header__bg.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
 .topline {
   width: 100%;
   display: block;
@@ -19,11 +64,8 @@ ul {
   display: flex;
   justify-content: space-between;
   padding: 0 15px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.mobile-menu-btn {}
 .links__time {
   display: none;
 }
@@ -39,6 +81,7 @@ ul {
   position: relative;
   width: 30px;
   height: 30px;
+  margin-right: -15px;
 }
 
 .burger-btn:before,
@@ -76,34 +119,161 @@ ul {
   background-color: #000;
 }
 
-.burger-btn__dot:befor {
-  content: '';
-  display: block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #000;
-}
 .logo {
   display: none;
 }
-
 .header__nav {
   position: absolute;
   top: 0;
   width: 100%;
+  display: none;
   left: 0;
-  background-color: lightgray;
+  background-color: #e9e9f1;;
   padding: 40px 0;
   text-align: center;
 }
-
+.btn {
+  box-sizing: border-box;
+  border: 1px solid #000;
+  padding: 8px 25px;
+  color: #000;
+  font-size: 16px;
+  text-decoration: none;
+}
 .btn--header {
   display: none;
 }
-.promo {
-  text-align: center;
+
+.section__inner {
+  padding: 0 15px;
+}
+.promo__title {
+  margin-top: 80px;
+  margin-bottom: 45px;
+  width: 205px;
+  text-align: left;
 }
 .promo__text {
   display: none;
+}
+
+/* Track-list */
+
+.track-list {
+  padding-top: 5px;
+  padding-bottom: 120px;
+  background-image: url(../img/track__bg.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+}
+
+.track {
+  display: none;
+  position: relative;
+  z-index: 2;
+  width: 65%;
+  margin: 50px auto 0;
+  color: #c7c7d3;
+  
+}
+.track--active {
+  display: block;
+}
+
+.track-header {
+  padding: 33px 27px 25px;
+  background-color: #3b434a;
+  opacity: .75;
+  text-align: center;
+  text-shadow: 0 2px 2px #000;
+
+}
+.track__title {
+  font-size: 30px;
+  font-weight: 700;
+}
+.track-img {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  overflow: hidden;
+  margin-bottom: -5px;
+}
+.track-descr {
+  background-color: #3b434a;
+  opacity: .75;
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 55px;
+}
+.track-descr__text {
+  margin: 0;
+}
+
+
+/* action */
+
+.action {
+  margin-top: -41px;
+}
+.actions {
+  margin-top: 55px;
+}
+.action-card {
+  overflow: hidden;
+  padding: 170px 15px 20px;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-position: -235px 0px
+}
+
+.action-card__descr {
+  display: block;
+  color: #fff;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+
+/* advantages (adv)*/
+.adv-wrap {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 50px;
+  background-image: url(../img/adv__bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.adv {
+  padding-top: 50px;
+}
+.adv__item {
+  padding-left: 75px;
+  padding-bottom: 50px;
+}
+.adv__text {
+  color: #fff;
+  font-size: 14px;
+  left: 16px;
+}
+
+
+
+/* Galary */
+.galery {
+  margin-bottom: 30px;
+}
+.galery__item {
+  display: none;
+  width: 65%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.galery__item--active {
+  display: block;
 }
