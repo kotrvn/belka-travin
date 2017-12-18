@@ -171,16 +171,16 @@
         <h2 class="section__title section__title--white">У нас</h2>
         <div class="adv">
 
-          <div class="adv__item">
+          <div class="adv__item adv__item--rope">
             <p class="adv__text">Альпинистское снаряжение  и страховочные
              устройства французской компании Petzl</p>
           </div>
 
-          <div class="adv__item">
+          <div class="adv__item adv__item--sign">
             <p class="adv__text">Понятная маркировка трасс (ламинированные
              таблички и зацепки определенного цвета для каждой трассы)</p>
           </div>
-          <div class="adv__item">
+          <div class="adv__item adv__item--question">
             <p class="adv__text">На территории скалодрома всегда находится
             инструктор, который готов ответить на любой Ваш вопрос!</p>
           </div>
@@ -210,65 +210,61 @@
     <div class="section__inner"></div>
     <h2 class="section__title">Цены</h2>
 
-    <form action="#" class="price-form--mobile">
+    <form action="#" class="price-form price-form--mobile">
+
       <ul class="accordion">
-        <li class="accordion__item">
-          <a href="#" class="accordion__link">Выберите возраст</a>
-          <ul class="accordion-check">
-            <li class="accordion-check__item">
-              <input type="checkbox" name="age" value="4" id="age-4"><label for="age-4">Детский от 4 лет</label>
-            </li>
-            <li class="accordion-check__item">
-              <input type="checkbox" name="age" value="7" id="age-7"><label for="age-4">Взрослый/Детский от 7 лет</label>
-            </li>
-          </ul>
+        <li class="accordion-item accordion-item--age">
+        <a href="#" class="accordion-link accordion-link--active">Выберите возраст</a>
+        <div class="accordion-link__list--hidden">
+        <label class="accordion-link__item" for="kids">
+          <input class="accordion-link__input" type="radio" name="age" value="kids" id="kids">Детский<br> от 4 лет</label>
+        <label class="accordion-link__item" for="adult">
+          <input class="accordion-link__input" type="radio" name="age" value="adult" id="adult">Взрослый/Детский<br> от 7 лет</label>
+        </div>
         </li>
-        <li class="accordion__item">
-          <a href="#" class="accordion__link">Выберите путь</a>
-          <ul class="accordion-check">
-            <li class="accordion-check__item">
-              <input type="checkbox" name="way" value="all" id="way-1"><label for="way-1">Все трассы</label>
-            </li>
-            <li class="accordion-check__item">
-              <input type="checkbox" name="way" value="rock" id="way-2"><label for="way-2">Cкалодром</label>
-            </li>
-            <li class="accordion-check__item">
-              <input type="checkbox" name="way" value="rope" id="way-3"><label for="way-3">Веревочный парк</label>
-            </li>
-          </ul>
+
+        <li class="accordion-item">
+          <a href="#" class="accordion-link accordion-link--way">Выберите путь</a>
+          <div class="accordion-link__list accordion-link__list--hidden">
+            <label class="accordion-link__item" for="all">
+              <input class="accordion-link__input" type="radio" name="way" value="all" id="all">Все трассы<br> веревочный парк + скалодром</label>
+            <label class="accordion-link__item" for="rock">
+              <input class="accordion-link__input" type="radio" name="way" value="rock" id="rock">Cкалодром</label>
+            <label class="accordion-link__item" for="rope">
+              <input class="accordion-link__input" type="radio" name="way" value="rope" id="rope">Веревочный парк</label>
+          </div>
         </li>
-        <li class="accordion__item">
-          <a href="#" class="accordion__link">Выберите длительность</a>
-          <ul class="accordion-check">
-            <li class="accordion-check__item">
-              <input type="checkbox" name="time" value="all" id="time-1"><label for="time-1">3 часа</label>
-            </li>
-            <li class="accordion-check__item">
-              <input type="checkbox" name="time" value="rock" id="time-2"><label for="time-2">12 часов</label>
-            </li>
-          </ul>
+
+        <li class="accordion-item accordion-item--time">
+          <a href="#" class="accordion-link accordion-link--time">Выберите длительность</a>
+          <div class="accordion-link__list accordion-link__list--hidden">
+            <label class="accordion-link__item" for="time-1">
+              <input class="accordion-link__input" type="radio" name="time" value="time-1" id="time-1">Прохождение парка<br> за 3 часа</label>
+            <label class="accordion-link__item" for="time-2">
+              <input class="accordion-link__input" type="radio" name="time" value="time-2" id="time-2">Прохождение парка<br> за 12 часов</label>
+          </div>
         </li>
       </ul>
+
       <div class="cost">
-        <span class="cost__text">Стоймость абонемента</span>
-        <span class="cost_value">0</span>
-        <ul class="option">
-          <li class="option__item">Персональный оператор парка 600 р/час</li>
-          <li class="option__item">Каждый дополнительный час + 500 р</li>
+        <p class="cost-text">Стоймость абонемента
+          <span class="cost-value">0</span>
+        </p>
+        
+        <ul class="cost-option">
+          <li class="cost-option__item">Персональный оператор парка 600 р/час</li>
+          <li class="cost-option__item">Каждый дополнительный час + 500 р</li>
         </ul>
       </div>
-      <div class="price-submit">
+      <div class="cost-submit">
         <input type="submit" class="btn btn--red" value="Купить">
-        <a href="#" class="price-form__link">Техника безопасности (PDF)</a>
+        <a href="#" class="safe-link">Техника безопасности (PDF)</a>
       </div>
     </form>
 
 
     <!-- Делаем таблицей  input type="radio" и lable в ячейке или дивами?-->
-    <form action="#" class="price-form">
-      
-
-    <form action="#" class="price-form">
+    <form action="#" class="price-form price-form--table">
       <span class="price-form__cell--grey-bg">Детский от 4 лет</span>
       <span class="price-form__cell--grey-bg">Взрослый/Детский от 7 лет</span>
       <p class="price-form__title">Прохождение препятствий парка <b>3 часа</b></p>
@@ -313,7 +309,7 @@
 
 
     <div class="reviews">
-      <span class="section__title">Отзывы</span>
+      <h2 class="section__title">Отзывы</h2>
       <div class="rewiev">
 
         <div class="rewiev-item">

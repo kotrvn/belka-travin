@@ -200,10 +200,11 @@ h1, h2, p {
 }
 
 .track {
+  overflow: hidden;
   display: none;
   position: relative;
   z-index: 2;
-  width: 65%;
+  width: 215px;
   margin: 50px auto 0;
   color: #c7c7d3;
   
@@ -213,7 +214,7 @@ h1, h2, p {
 }
 
 .track-header {
-  padding: 25px 27px 10px;
+  padding: 25px 20px 10px;
   background-color: #3b434a;
   opacity: .75;
   text-align: center;
@@ -253,8 +254,11 @@ h1, h2, p {
   position: absolute;
   top: 0;
   z-index: -1;
-  overflow: hidden;
   margin-bottom: -5px;
+}
+.track-img__item {
+  width: 100%;
+  height: auto;
 }
 .track-descr {
   background-color: #3b434a;
@@ -307,15 +311,40 @@ h1, h2, p {
 
 .adv {
   padding-top: 50px;
+  padding-bottom: 48px;
 }
 .adv__item {
-  padding-left: 75px;
-  padding-bottom: 50px;
+  position: relative;
+  vertical-align: middle;
+  padding-left: 80px;
+  margin-bottom: 50px;
+  margin-left: 15px;
+  margin-right: 17px;
+
 }
+.adv__item:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  width: 75px;
+  height: 76px;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+}
+.adv__item--rope:before {
+    background-position: -533px -5px;
+}
+.adv__item--sign:before {
+    background-position: -618px -5px;
+}
+.adv__item--question:before {
+    background-position: -448px -5px;
+}
+
 .adv__text {
   color: #fff;
   font-size: 14px;
-  left: 16px;
 }
 
 
@@ -332,4 +361,68 @@ h1, h2, p {
 }
 .galery__item--active {
   display: block;
+}
+
+/* Price */
+.price-form--table {
+  display: none;
+}
+.price-form {
+  margin-top: 55px;
+}
+.accordion-item {
+  display: block;
+  box-sizing: border-box;
+  border-top: 1px;
+  text-align: center;
+}
+.accordion-link {
+  position: relative;
+  display: block;
+  padding: 25px 0;
+  border-top: 1px solid #22313f;
+  border-bottom: 1px solid #22313f;
+  color: #22313f;
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: none;
+}
+.accordion-link:after {
+  content: '';
+  position: absolute;
+  right: 30px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: block;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 25px;
+  background-position: -214px -5px;
+  transition: all .6s;
+}
+.accordion-link:active:after {
+  transform: rotate(-90deg);
+}
+.accordion-link__item {
+  display: block;
+  padding: 11px;
+  background-color: #22313f;
+  text-transform: uppercase;
+  color: #dadae7;
+  font-size: 16px;
+  line-height: 24px;
+}
+.accordion-link__input {
+  display: none;
+}
+
+.cost-text {
+  display: block;
+  padding: 25px 15px;
+  background-color: #f1f1f1;
+  color: #22313f;
+  font-size: 16px;
+  line-height: 18px;
 }
