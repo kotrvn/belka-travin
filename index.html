@@ -38,9 +38,9 @@
         </ul>
       </nav>
       <div class="social-link social-link--header">
-        <a href="#" class="social-link social-link__tw">tw</a>   
-        <a href="#" class="social-link social-link__inst">vk</a>
-        <a href="#" class="social-link social-link__vk">fb</a>
+        <a href="#" class="social-link__item  social-link__item--tw"></a>   
+        <a href="#" class="social-link__item  social-link__item--inst"></a>
+        <a href="#" class="social-link__item  social-link__item--vk"></a>
       </div>
       </div>
       <section class="section">
@@ -207,7 +207,6 @@
   </section>
 
   <section class="section">
-    <div class="section__inner"></div>
     <h2 class="section__title">Цены</h2>
 
     <form action="#" class="price-form price-form--mobile">
@@ -261,8 +260,7 @@
         <a href="#" class="safe-link">Техника безопасности (PDF)</a>
       </div>
     </form>
-
-
+    <div class="section__inner">
     <!-- Делаем таблицей  input type="radio" и lable в ячейке или дивами?-->
     <form action="#" class="price-form price-form--table">
       <span class="price-form__cell--grey-bg">Детский от 4 лет</span>
@@ -306,65 +304,39 @@
         <a href="#" class="price-form__link">Техника безопасности (PDF)</a>
       </p>
     </form>
-
-
-    <div class="reviews">
-      <h2 class="section__title">Отзывы</h2>
-      <div class="rewiev">
-
-        <div class="rewiev-item">
-          <div class="rewiev-item__img-wrap">
-            <img class="rewiev-item__img" src="#" alt="#">
-          </div>
-          <div class="rewiev-item__info">
-            <span class="rewiev-item__name">Вася</span>
-            <span class="rewiev-item__profession">Cтудент</span>
-            <div class="rewiev-item__social social-link">
-              <a href="#" class="social-link__item social-link__item--vk">vk</a>
-              <a href="#" class="social-link__item social-link__item--fb">fb</a>
-            </div>
-          </div>
-          <p class="rewiev-item__text">Интересные трассы, вкусная еда и самые
-           приветливые тренера!</p>
-        </div>
-
-
-        <div class="slider-item">
-          <img class="slider-item__img" src="#" alt="#">
-          <div class="slider-item__info">
-            <span class="slider-item__name">Вася</span>
-            <span class="slider-item__profession">Cтудент</span>
-            <div class="slider-item__social social-link">
-              <a href="#" class="social-link--small social-link__inst">vk</a>
-              <a href="#" class="social-link--small social-link__vk">fb</a>
-            </div>
-          </div>
-          <p class="slider-item__text">Лучший скалодром в городе!</p>
-        </div>
-        <div class="slider-item">
-          <img class="slider-item__img" src="#" alt="#">
-          <div class="slider-item__info">
-            <span class="slider-item__name">Вася</span>
-            <span class="slider-item__profession">Cтудент</span>
-            <div class="slider-item__social social-link">
-              <a href="#" class="social-link--small social-link__inst">vk</a>
-              <a href="#" class="social-link--small social-link__vk">fb</a>
-            </div>
-          </div>
-          <p class="slider-item__text">Парк «BELKA» - отличная альтернатива наскучившим
-           походам в кино и кафе.</p>
-        </div>
-        <div class="btn-arrows">
-          <button class="btn-arrows--left"></button>
-          <button class="btn-arrows--right"></button>
-        </div>
-
-    </div>
   </div>
+  <section class="section">
+    <div class="reviews-wrap">
+      <div class="section__inner">
+        <div class="reviews">
+        <h2 class="section__title">Отзывы</h2>
+
+          <div class="review-item">
+            <div class="review-item__img img-mask">
+              <img class="img-content" src="img/review-img.jpg" alt="review">
+            </div>
+            <div class="review-item__info">
+              <span class="info-name">Мария.</span>
+              <span class="info-profession">Cтудентка.</span>
+              <div class="review-item__social social-icon">
+                <a href="#" class="social-icon__item social-icon__item--inst--review"></a>
+                <a href="#" class="social-icon__item social-icon__item--vk--review"></a>
+              </div>
+            </div>
+            <p class="rewiev-item__text">Интересные трассы, вкусная еда и самые
+             приветливые тренера!</p>
+           </div>
+        </div>
+      </div>
+    </div>
   </section>
+</section>
   <footer class="footer">
-    <div class="container">
-      <div class="footer__info">
+    <div class="footer__inner">
+      <div class="footer-map">
+        <img class="footer-map__img" src="img/map.jpg" alt="#">
+      </div>
+      <div class="footer-info">
         <div class="links links--footer">
           <a href="#" class="links__phone">8(812)999-77-88</a>
           <a href="#" class="links__adress">Выборгское ш. д. 20</a>
@@ -379,17 +351,13 @@
         </ul>
       </nav>
         <div class="social-link social-link--footer">
-          <a href="#" class="social-link social-link__tw">tw</a>   
-          <a href="#" class="social-link social-link__inst">vk</a>
-          <a href="#" class="social-link social-link__vk">fb</a>
+          <a href="#" class="social-link__item  social-link__item--tw"></a>   
+          <a href="#" class="social-link__item  social-link__item--inst"></a>
+          <a href="#" class="social-link__item  social-link__item--vk"></a>
         </div>
         <a href="#" class="to-top">  </a>
       </div>
-      <div class="map">   
-        <!-- AIzaSyC1tB1btHN3J992u-Sq_bedoMRC9adEJPs -->
 
-
-      </div>
     </div>
   </footer>
   <!-- <script async defer
