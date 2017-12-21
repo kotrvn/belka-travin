@@ -30,10 +30,8 @@ h1, h2, p {
   color: #22313f;
   text-decoration: none;
 }
-.nav--mobile {
-  text-align: center;
-}
-.nav--mobile .nav__list {
+
+.mobile-menu .nav__list {
   margin: 0 auto;
 }
 
@@ -252,12 +250,14 @@ h1, h2, p {
   width: 100%;
   padding-top: 90px;
   padding-bottom: 100px;
-  display: block;
   left: 0;
   background-color: #e9e9f1;
   text-align: center;
+  display: none;
 }
-
+.mobile-menu {
+  display: block;
+}
 .btn--header {
   display: none;
 }
@@ -504,7 +504,12 @@ h1, h2, p {
 .accordion-link__input {
   display: none;
 }
-
+.accordion-link__list--hidden {
+  display: none;
+}
+.accordion-link__list--active {
+  display: block;
+}
 .cost-text {
   position: relative;
   display: block;
@@ -564,6 +569,8 @@ h1, h2, p {
 }
 .review-item {
   text-align: center;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 
 .img-mask {

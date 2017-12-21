@@ -6,6 +6,8 @@
   <title>Belka - скаладром</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -28,7 +30,7 @@
       </a>
       <a href="#" class="btn btn--gray btn--header">Купить билет</a>
       <div class="header__nav">
-      <nav class="nav nav--header nav--mobile">
+      <nav class="nav nav--header">
         <ul class="nav__list">
           <li class="nav__item"><a href="#" class="nav__link">Трассы</a></li>
           <li class="nav__item"><a href="#" class="nav__link">Акции</a></li>
@@ -214,7 +216,7 @@
       <ul class="accordion">
         <li class="accordion-item accordion-item--age">
         <a href="#" class="accordion-link accordion-link--active">Выберите возраст</a>
-        <div class="accordion-link__list--hidden">
+        <div class="accordion-link__list--hidden accordion-link__list--active">
         <label class="accordion-link__item" for="kids">
           <input class="accordion-link__input" type="radio" name="age" value="kids" id="kids">Детский<br> от 4 лет</label>
         <label class="accordion-link__item" for="adult">
@@ -310,22 +312,57 @@
       <div class="section__inner">
         <div class="reviews">
         <h2 class="section__title">Отзывы</h2>
+          <div id="review-slider">
 
-          <div class="review-item">
-            <div class="review-item__img img-mask">
-              <img class="img-content" src="img/review-img.jpg" alt="review">
-            </div>
-            <div class="review-item__info">
-              <span class="info-name">Мария.</span>
-              <span class="info-profession">Cтудентка.</span>
-              <div class="review-item__social social-icon">
-                <a href="#" class="social-icon__item social-icon__item--inst--review"></a>
-                <a href="#" class="social-icon__item social-icon__item--vk--review"></a>
+            <div class="review-item">
+              <div class="review-item__img img-mask">
+                <img class="img-content" src="img/review-img.jpg" alt="review">
               </div>
+              <div class="review-item__info">
+                <span class="info-name">Мария.</span>
+                <span class="info-profession">Cтудентка.</span>
+                <div class="review-item__social social-icon">
+                  <a href="#" class="social-icon__item social-icon__item--inst--review"></a>
+                  <a href="#" class="social-icon__item social-icon__item--vk--review"></a>
+                </div>
+              </div>
+              <p class="rewiev-item__text"> трассы, вкусная еда и самые
+               приветливые тренера!</p>
+             </div>
+
+             <div class="review-item">
+              <div class="review-item__img img-mask">
+                <img class="img-content" src="img/review-img.jpg" alt="review">
+              </div>
+              <div class="review-item__info">
+                <span class="info-name">Вася.</span>
+                <span class="info-profession">Cтудентка.</span>
+                <div class="review-item__social social-icon">
+                  <a href="#" class="social-icon__item social-icon__item--inst--review"></a>
+                  <a href="#" class="social-icon__item social-icon__item--vk--review"></a>
+                </div>
+              </div>
+              <p class="rewiev-item__text">Интересные трассы,  и самые
+               приветливые тренера!</p>
+             </div>
+
+             <div class="review-item">
+              <div class="review-item__img img-mask">
+                <img class="img-content" src="img/review-img.jpg" alt="review">
+              </div>
+              <div class="review-item__info">
+                <span class="info-name">Петя.</span>
+                <span class="info-profession">Cтудентка.</span>
+                <div class="review-item__social social-icon">
+                  <a href="#" class="social-icon__item social-icon__item--inst--review"></a>
+                  <a href="#" class="social-icon__item social-icon__item--vk--review"></a>
+                </div>
+              </div>
+              <p class="rewiev-item__text">Интересные трассы, вкусная еда и самые
+               приветливые тренера!</p>
+             </div>
+
             </div>
-            <p class="rewiev-item__text">Интересные трассы, вкусная еда и самые
-             приветливые тренера!</p>
-           </div>
         </div>
       </div>
     </div>
@@ -361,6 +398,8 @@
     </div>
   </footer>
   <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/slick.min.js"></script>
   <script src="js/script.js"></script>
+  
 </body>
 </html>
