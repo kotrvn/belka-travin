@@ -120,6 +120,9 @@
 .slick {
     position: relative;
 }
+.slick-item {
+    margin: 0 auto;
+}
 .slick-next.slick-arrow {
     position: absolute;
     top: 0;
@@ -132,7 +135,6 @@
     background-position: -283px -5px;
     border: none;
     background-color: transparent;
-    text-indent: -9999px;
     z-index: 10;
 }
 .slick-prev.slick-arrow {
@@ -147,7 +149,6 @@
     background-position: -283px -5px;
     border: none;
     background-color: transparent;
-    text-indent: -9999px;
     transform: rotate(180deg);
     z-index: 10;
 }

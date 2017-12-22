@@ -9,20 +9,24 @@ $(document).ready(function(){
   $('#track-slider').slick({
         mobileFirst: true,
         slidesToShow: 1,
-        centerMode: true,
-        arrow: true
+        arrow: true,
+        nextArrow: '<button type="button" class="slick-next"></button>',
+        prevArrow: '<button type="button" class="slick-prev"></button>'
   });
   $('#galery-slider').slick({
         mobileFirst: true,
         slidesToShow: 1,
-        centerMode: true,
-        arrow: true
+        arrow: true,
+        nextArrow: '<button type="button" class="slick-next"></button>',
+        prevArrow: '<button type="button" class="slick-prev"></button>'
   });
   $('#review-slider').slick({
         mobileFirst: true,
         slidesToShow: 1,
-        centerMode: true,
-        arrow: true
+        arrow: true,
+        nextArrow: '<button type="button" class="slick-next"></button>',
+        prevArrow: '<button type="button" class="slick-prev"></button>'
+
   });
 });
 $(document).ready(function(){ 

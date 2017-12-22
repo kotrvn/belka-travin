@@ -450,10 +450,7 @@ h1, h2, p {
   display: block;
 }
 
-/* Price */
-.price-form--table {
-  display: none;
-}
+/* Price accordion  & table*/
 .price-form {
   margin-top: 55px;
 }
@@ -551,6 +548,52 @@ h1, h2, p {
   font-size: 14px;
   line-height: 18px;
   color: #22313f;
+}
+/* table */
+.table {
+  display: block;
+  font-family: Open Sans, serif;
+  vertical-align: middle;
+  width: 100%;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  text-align: center;
+}
+}
+.table__row {
+  empty-cells: hide;
+
+}
+.table__data {
+  width: 370px;
+  border: 1px solid #000;
+  padding: 30px 40px;
+}
+.table__data input {
+  visibility: hidden;
+}
+.table__data input {
+  color: #22313f;
+}
+.table__row--dark,
+.table__data--dark {
+  background-color: #5b6671;
+  color: #dadae7;
+  font-size: 16px;
+  line-height: 18px;
+
+}
+
+.table__data--gray {
+  padding-right: 20px;
+  background-color: #f0f0f0;
+  color #22313f;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: right;
+}
+.table__data--gray span {
+  font-weight: 700;
 }
 
 /* reviews */
