@@ -6,6 +6,7 @@ $(document).ready(function(){
   });
 
 // Слайдеры
+
   $('#track-slider').slick({
         mobileFirst: true,
         slidesToShow: 1,
@@ -28,17 +29,42 @@ $(document).ready(function(){
         prevArrow: '<button type="button" class="slick-prev"></button>'
 
   });
+
+  // Аккордеон
+
+  $('.price__content').hide();
+
+  $('.price__trigger').on('click', function(){
+    $(this).closest('.price').find('.price__content').slideToggle();
+  });
+
+  $('#price input:radio').on('change', function(){
+    calcPrice();
+  });
+
+  calcPrice();
+
+  function calcPrice () {
+    var price = 0;
+
+    $('#price input:checked').each(function(){
+      price = price + $(this).data('price');
+    });
+
+    $('#price-view').text(price);
+  }
+
+  // Навигация
+  // let burger = $('.j-burger');
+  // let dropdown = $('j-header-nav');
+
+  // burger.on('click', function() {
+  //   if (dropdown.hasClass('is-drop') ) {
+  //     dropdown.removeClass('is-drop');
+  //     return;
+  //   }
+
+  //   dropdown.addClass('is-drop');
+  // });
+
 });
-$(document).ready(function(){ 
-  let link = $('accordion-link');
-  let drop = $('.accordion-link__list--hidden');
-
-    link.on('click', function(e) {
-    e.preventDefault();
-    drop.toggleClass('.accordion-link--active')
-  });
-
-
-
-
-  });

@@ -253,11 +253,11 @@ h1, h2, p {
   left: 0;
   background-color: #e9e9f1;
   text-align: center;
-  display: none;
 }
-.mobile-menu {
+.is-drop {
   display: block;
 }
+
 .btn--header {
   display: none;
 }
@@ -372,7 +372,8 @@ h1, h2, p {
   padding: 170px 15px 20px;
   margin-bottom: 10px;
   background-repeat: no-repeat;
-  background-position: -235px 0px
+  background-position: center 0px;
+  background-size: cover;
 }
 
 .action-card__descr {
@@ -440,38 +441,45 @@ h1, h2, p {
 .galery {
   margin-bottom: 30px;
 }
-.galery__item {
-  display: none;
-  width: 65%;
+.galery-item {
   margin: 0 auto;
+  width: 65%;
+  display: none;
   overflow: hidden;
 }
-.galery__item--active {
+.galery-item--active {
   display: block;
 }
-
+.galery-item__img {
+  max-width: 100%;
+}
 /* Price accordion  & table*/
 .price-form {
   margin-top: 55px;
 }
-.accordion-item {
+.price {
   display: block;
   box-sizing: border-box;
   border-top: 1px;
   text-align: center;
 }
-.accordion-link {
+.price__trigger {
   position: relative;
   display: block;
+  width: 100%;
   padding: 25px 0;
+  border: none;
   border-top: 1px solid #22313f;
-  border-bottom: 1px solid #22313f;
+  background-color: #fff;
   color: #22313f;
   font-size: 16px;
   line-height: 18px;
   text-decoration: none;
 }
-.accordion-link:after {
+.price__trigger {
+  border-bottom: 1px solid #22313f;
+}
+.price__trigger:after {
   content: '';
   position: absolute;
   right: 30px;
@@ -486,27 +494,28 @@ h1, h2, p {
   background-position: -214px -5px;
   transition: all .6s;
 }
-.accordion-link:active:after {
+.price__trigger:focus:after {
   transform: rotate(-90deg);
+  border-color: transparent;
 }
-.accordion-link__item {
+.price__content {
   display: block;
-  padding: 11px;
   background-color: #22313f;
   text-transform: uppercase;
   color: #dadae7;
   font-size: 16px;
   line-height: 24px;
 }
-.accordion-link__input {
-  display: none;
-}
-.accordion-link__list--hidden {
-  display: none;
-}
-.accordion-link__list--active {
+.price__label {
   display: block;
+  width: 100%;
+  padding: 11px;
 }
+.price__input {
+  display: none;
+  width: 100%;
+}
+.price__input {}
 .cost-text {
   position: relative;
   display: block;
@@ -516,7 +525,6 @@ h1, h2, p {
   font-size: 16px;
   line-height: 18px;
 }
-
 .cost-value {
   position: absolute;
   right: 0;
@@ -524,19 +532,20 @@ h1, h2, p {
 }
 .cost-option {
   padding: 0 10px ;
-  text-align: justify;
+  text-align: center;
 }
 .cost-option__item {
   color: #22313f;
-  text-align: justify;
+  text-align: center;
   font-size: 13px;
   line-height: 24px;
-} 
-.cost-submit {
+}
+
+.price-submit {
   margin-top: 30px;
   text-align: center;
 }
-.cost-submit .btn {
+.price-submit .btn {
   display: block;
   margin: 0 auto;
   width: 200px;
@@ -558,15 +567,15 @@ h1, h2, p {
   border-collapse: collapse;
   box-sizing: border-box;
   text-align: center;
+  text-transform: uppercase;
 }
-}
+
 .table__row {
   empty-cells: hide;
 
 }
 .table__data {
   width: 370px;
-  border: 1px solid #000;
   padding: 30px 40px;
 }
 .table__data input {
@@ -595,7 +604,35 @@ h1, h2, p {
 .table__data--gray span {
   font-weight: 700;
 }
+.table--top {
+  margin-bottom: 60px;
+}
+.price-option__overtime {
+  padding: 20px 0 25px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.price-option__instructor {
+  position: relative;
+  padding: 20px 42px;
+  background-color: #f0f0f0;
+  color #22313f;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  text-transform: uppercase;
+}
 
+.price-option__instructor span {
+  position: absolute;
+  right: 42px;
+  text-align: right;
+}
+.price-form--table {
+  display: none;
+}
 /* reviews */
 
 .reviews-wrap {
@@ -672,7 +709,8 @@ h1, h2, p {
 
 .rewiev-item__text {
   margin-top: 22px;
-  padding: 0 55px 50px;
+  padding: 0 5px;
+  margin-bottom: 100px;
   text-align: center;
   font-size: 16px;
   line-height: 22px;
@@ -743,7 +781,7 @@ h1, h2, p {
   background-repeat: no-repeat;
   display: block;
   padding: 5px;
-  width: 25px;
-  height: 25px;
-  background-position: 1px 4px;
+  width: 30px;
+  height: 30px;
+  background-position: -2px 1px;
 }
