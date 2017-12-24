@@ -11,7 +11,8 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="header">
+<main>
+  <header class="header" id="header">
     <div class="topline">
       <div class="topline__inner">
         <div class="links links--topline">
@@ -54,7 +55,7 @@
       </section>
     </div>
   </header>
-  <section class="section tracks-list">
+  <section class="section tracks-list" id="tracks">
     <div class="section__inner">
       <h2 class="section__title section__title--white">Трассы</h2>
       <div id="track-slider" class="slick">
@@ -170,7 +171,6 @@
       </div>
     </div>
   </section>
-
   <section class="section" id="adv">
     <div class="section__inner">
       <div class="adv-wrap">
@@ -194,9 +194,7 @@
       </div>
     </div>
   </section>
-
-
-  <section class="section">
+  <section class="section" id="gallery">
     <div class="section__inner">
     <div id="galery-slider" class="galery slick">
       <div class="slick__item">
@@ -217,216 +215,209 @@
     </div>
     </div>
   </section>
-
- <section class="section" id="price">
-    <h2 class="section__title">Цены</h2>
-    <form action="#" class="price-form price-form--mobile">
-      <form action="" id="price-form price-form--mobile">
-      <div class="price">
-        <button class="price__trigger" type="button">Выберите возраст</button>
-        <div class="price__content">
-          <label class="price__label">
-            <input class="price__input" type="radio" name="age" data-price="0" checked>
-            Детский от 4 лет
-          </label>
-          <label class="price__label">
-            <input class="price__input" type="radio" name="age" data-price="300">
-            Взрослый от 7 лет
-          </label>
-        </div>
-      </div>
-      <div class="price">
-        <button class="price__trigger" type="button">Выберите место</button>
-        <div class="price__content">
-          <label class="price__label">
-            <input class="price__input" type="radio" name="way" data-price="2200" checked>
-            Все трассы<br>Cкалодром+Веревочный парк
-          </label>
-          <label class="price__label">
-            <input class="price__input" type="radio" name="way" data-price="1000">
-            Скалодром
-          </label>
-          <label class="price__label">
-            <input class="price__input" type="radio" name="way" data-price="1200">
-            Веревочный парк
-          </label>
-        </div>
-      </div>
-      <div class="price">
-        <button class="price__trigger" type="button">Выберите время</button>
-        <div class="price__content">
-          <label class="price__label">
-            <input class="price__input" type="radio" name="time" data-price="0" checked>
-            3 часа
-          </label>
-          <label class="price__label">
-            <input class="price__input" type="radio" name="time" data-price="2500">
-            12 часов
-          </label>
-        </div>
-      </div>
-      <div class="cost">
-        <p class="cost-text">Стоймость абонемента
-          <span class="cost-value" id="price-view"></span>
-        </p>
-        
-        <ul class="cost-option">
-          <li class="cost-option__item">Персональный оператор парка 600 р/час</li>
-          <li class="cost-option__item">Каждый дополнительный час + 500 р</li>
-        </ul>
-      </div>
-      <!-- <div class="cost-submit">
-        <input type="submit" class="btn btn--red" value="Купить">
-        <a href="#" class="safe-link">Техника безопасности (PDF)</a>
-      </div> -->
-      <!-- <div id="price-view"></div> -->
-    </form>
+  <section class="section" id="price">
     <div class="section__inner">
-    <!-- Делаем таблицей  input type="radio" и lable в ячейке или дивами?-->
-    <form action="#" class="price-form price-form--table">
-        <table class="table table--top">
-          <tr class="table__row  table__row--dark">
-            <td class="table__data"></td>
-            <td class="table__data">Детский<br> от 4 лет</td>
-            <td class="table__data">Взрослый/Детский<br> от 7 лет</td>
-          </tr>
-            <tr class="table__row">
-              <td colspan="3" class="table__data  table__data--gray">Прохождение препятствий парка <span>3 часа</span></td>
-            </tr>
-            <tr class="table__row">
-              <td class="table__data  table__data--dark">Все трассы<br>Веревочный парк + скалодром</td>
-              <td class="table__data">
-                <label for="check-1"><input type="radio" name="price-form" id="check-1">2200 р</label>
-              </td>
-              <td class="table__data">
-                <label for="check-2"><input type="radio" name="price-form" id="check-2">2500 р</label>
-              </td>
-            </tr>
-            <tr class="table__row">
-              <td class="table__data  table__data--dark">Веревочный парк</td>
-              <td class="table__data">
-                <label for="check-3"><input type="radio" name="price-form" id="check-3">1300 р</label>
-              </td>
-              <td class="table__data">
-                <label for="check-4"><input type="radio" name="price-form" id="check-4">1000 р</label>
-              </td>
-            </tr>
-            <tr class="table__row">
-              <td class="table__data  table__data--dark">Скалодром</td>
-              <td class="table__data">
-                <label for="check-5"><input type="radio" name="price-form" id="check-5">1200 р</label>
-              </td>
-              <td class="table__data">
-                <label for="check-6"><input type="radio" name="price-form" id="check-6">1500 р</label>
-              </td>
-            </tr>
+      <h2 class="section__title">Цены</h2>
+      <form action="#" class="price-form price-form--mobile" id="price-form">
+        <div class="price">
+          <button class="price__trigger" type="button">Выберите возраст</button>
+          <div class="price__content">
+            <label class="price__label">
+              <input class="price__input" type="radio" name="age" data-price="0" checked>
+              Детский от 4 лет
+            </label>
+            <label class="price__label">
+              <input class="price__input" type="radio" name="age" data-price="300">
+              Взрослый от 7 лет
+            </label>
+          </div>
+        </div>
+        <div class="price">
+          <button class="price__trigger" type="button">Выберите место</button>
+          <div class="price__content">
+            <label class="price__label">
+              <input class="price__input" type="radio" name="way" data-price="2200" checked>
+              Все трассы<br>Cкалодром+Веревочный парк
+            </label>
+            <label class="price__label">
+              <input class="price__input" type="radio" name="way" data-price="1000">
+              Скалодром
+            </label>
+            <label class="price__label">
+              <input class="price__input" type="radio" name="way" data-price="1200">
+              Веревочный парк
+            </label>
+          </div>
+        </div>
+        <div class="price">
+          <button class="price__trigger" type="button">Выберите время</button>
+          <div class="price__content">
+            <label class="price__label">
+              <input class="price__input" type="radio" name="time" data-price="0" checked>
+              3 часа
+            </label>
+            <label class="price__label">
+              <input class="price__input" type="radio" name="time" data-price="2500">
+              12 часов
+            </label>
+          </div>
+        </div>
+        <div class="cost">
+          <p class="cost-text">Стоймость абонемента
+            <span class="cost-value" id="price-view"></span>
+          </p>
+          <ul class="cost-option">
+            <li class="cost-option__item">Персональный оператор парка 600 р/час</li>
+            <li class="cost-option__item">Каждый дополнительный час + 500 р</li>
+          </ul>
+        </div>
+      </form>
+      <form action="#" class="price-form price-form--table" id="price-table">
+        <div class="table-header">
+          <table class="table">
+            <tbody>
+              <tr class="table__row  table__row--dark">
+                <td class="table__data"></td>
+                <td class="table__data">Детский<br> от 4 лет</td>
+                <td class="table__data">Взрослый/Детский<br> от 7 лет</td>
+              </tr>
+              <tr class="table__row">
+                <td colspan="3" class="table__data  table__data--gray">
+                  Прохождение препятствий парка <span>3 часа</span></td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__data  table__data--dark">Все трассы<br>Веревочный парк + скалодром</td>
+                <td class="table__data">
+                  <label for="check-1"><input type="radio" name="price-form" id="check-1">2200 р</label>
+                </td>
+                <td class="table__data">
+                  <label for="check-2"><input type="radio" name="price-form" id="check-2">2500 р</label>
+                </td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__data  table__data--dark">Веревочный парк</td>
+                <td class="table__data">
+                  <label for="check-3"><input type="radio" name="price-form" id="check-3">1300 р</label>
+                </td>
+                <td class="table__data">
+                  <label for="check-4"><input type="radio" name="price-form" id="check-4">1000 р</label>
+                </td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__data  table__data--dark">Скалодром</td>
+                <td class="table__data">
+                  <label for="check-5"><input type="radio" name="price-form" id="check-5">1200 р</label>
+                </td>
+                <td class="table__data">
+                  <label for="check-6"><input type="radio" name="price-form" id="check-6">1500 р</label>
+                </td>
+              </tr>
+            </tbody>
           </table>
-          <table class="table table--bottom">
-            <td colspan="3" class="table__data  table__data--gray">Прохождение препятствий парка <span>12 часов</span></td>
-            </tr>
-            <tr class="table__row">
-              <td class="table__data  table__data--dark">Все трассы<br>Веревочный парк + скалодром</td>
-              <td class="table__data">
-                <label for="check-7"><input type="radio" name="price-form" id="check-7">5500 р</label>
-              </td>
-              <td class="table__data">
-                <label for="check-8"><input type="radio" name="price-form" id="check-8">6000 р</label>
-              </td>
-            </tr>
-            <tr class="table__row">
-              <td class="table__data  table__data--dark">Веревочный парк</td>
-              <td class="table__data">
-                <label for="check-9"><input type="radio" name="price-form" id="check-9">3000 р</label>
-              </td>
-              <td class="table__data">
-                <label for="check-10"><input type="radio" name="price-form" id="check-10">3500 р</label>
-              </td>
-            </tr>
-            <tr class="table__row">
-              <td class="table__data  table__data--dark">Скалодром</td>
-              <td class="table__data">
-                <label for="check-11"><input type="radio" name="price-form" id="check-11">4000 р</label>
-              </td>
-              <td class="table__data">
-                <label for="check-12"><input type="radio" name="price-form" id="check-12">4500 р</label>
-              </td>
-            </tr>
+        </div>
+        <div class="table-bottom">
+          <table class="table">
+            <tbody>
+              <tr class="table__row">
+                <td colspan="3" class="table__data  table__data--gray">Прохождение препятствий парка <span>12 часов</span></td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__data  table__data--dark">Все трассы<br>Веревочный парк + скалодром</td>
+                <td class="table__data">
+                  <label for="check-7"><input type="radio" name="price-form" id="check-7">5500 р</label>
+                </td>
+                <td class="table__data">
+                  <label for="check-8"><input type="radio" name="price-form" id="check-8">6000 р</label>
+                </td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__data  table__data--dark">Веревочный парк</td>
+                <td class="table__data">
+                  <label for="check-9"><input type="radio" name="price-form" id="check-9">3000 р</label>
+                </td>
+                <td class="table__data">
+                  <label for="check-10"><input type="radio" name="price-form" id="check-10">3500 р</label>
+                </td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__data  table__data--dark">Скалодром</td>
+                <td class="table__data">
+                  <label for="check-11"><input type="radio" name="price-form" id="check-11">4000 р</label>
+                </td>
+                <td class="table__data">
+                  <label for="check-12"><input type="radio" name="price-form" id="check-12">4500 р</label>
+                </td>
+              </tr>
+            </tbody>
           </table>
+        </div>
         <div class="price-option">
           <p class="price-option__overtime">Каждый дополнительный час + 500 р</p>
           <p class="price-option__instructor">Персональный оператор парка <span>600 р/час</span></p>
         </div>
-      </div>
+      </form>
       <div class="price-submit">
         <input type="submit" class="btn btn--red" value="Купить">
         <a href="#" class="safe-link">Техника безопасности (PDF)</a>
       </div>
-
-      </div>
-    </form>
-  </div>
-
-  <section class="section">
-    <div class="reviews-wrap">
-      <div class="section__inner">
-        <div class="reviews">
-        <h2 class="section__title">Отзывы</h2>
-          <div id="review-slider">
-
-            <div class="review-item">
-              <div class="review-item__img img-mask">
-                <img class="img-content" src="img/review-img.jpg" alt="review">
-              </div>
-              <div class="review-item__info">
-                <span class="info-name">Мария.</span>
-                <span class="info-profession">Cтудентка.</span>
-                <div class="review-item__social social-icon">
-                  <a href="#" class="social-icon__item social-icon__item--inst--review"></a>
-                  <a href="#" class="social-icon__item social-icon__item--vk--review"></a>
+      <section class="section">
+        <div class="reviews-wrap">
+          <div class="section__inner">
+            <div class="reviews">
+            <h2 class="section__title">Отзывы</h2>
+              <div id="review-slider">
+                <div class="review-item">
+                  <div class="review-item__img img-mask">
+                    <img class="img-content" src="img/review-img.jpg" alt="review">
+                  </div>
+                  <div class="review-item__info">
+                    <span class="info-name">Мария.</span>
+                    <span class="info-profession">Cтудентка.</span>
+                    <div class="review-item__social social-icon">
+                      <a href="#" class="social-icon__item social-icon__item--inst--review"></a>
+                      <a href="#" class="social-icon__item social-icon__item--vk--review"></a>
+                    </div>
+                  </div>
+                  <p class="rewiev-item__text"> трассы, вкусная еда и самые
+                   приветливые тренера!</p>
+                 </div>
+                 <div class="review-item">
+                  <div class="review-item__img img-mask">
+                    <img class="img-content" src="img/review-img.jpg" alt="review">
+                  </div>
+                  <div class="review-item__info">
+                    <span class="info-name">Вася.</span>
+                    <span class="info-profession">Cтудентка.</span>
+                    <div class="review-item__social social-icon">
+                      <a href="#" class="social-icon__item social-icon__item--inst--review"></a>
+                      <a href="#" class="social-icon__item social-icon__item--vk--review"></a>
+                    </div>
+                  </div>
+                  <p class="rewiev-item__text">Интересные трассы,  и самые
+                   приветливые тренера!</p>
+                 </div>
+                 <div class="review-item">
+                  <div class="review-item__img img-mask">
+                    <img class="img-content" src="img/review-img.jpg" alt="review">
+                  </div>
+                  <div class="review-item__info">
+                    <span class="info-name">Петя.</span>
+                    <span class="info-profession">Cтудентка.</span>
+                    <div class="review-item__social social-icon">
+                      <a href="#" class="social-icon__item social-icon__item--inst--review"></a>
+                      <a href="#" class="social-icon__item social-icon__item--vk--review"></a>
+                    </div>
+                  </div>
+                  <p class="rewiev-item__text">Интересные трассы, вкусная еда и самые
+                   приветливые тренера!</p>
+                 </div>
                 </div>
-              </div>
-              <p class="rewiev-item__text"> трассы, вкусная еда и самые
-               приветливые тренера!</p>
-             </div>
-
-             <div class="review-item">
-              <div class="review-item__img img-mask">
-                <img class="img-content" src="img/review-img.jpg" alt="review">
-              </div>
-              <div class="review-item__info">
-                <span class="info-name">Вася.</span>
-                <span class="info-profession">Cтудентка.</span>
-                <div class="review-item__social social-icon">
-                  <a href="#" class="social-icon__item social-icon__item--inst--review"></a>
-                  <a href="#" class="social-icon__item social-icon__item--vk--review"></a>
-                </div>
-              </div>
-              <p class="rewiev-item__text">Интересные трассы,  и самые
-               приветливые тренера!</p>
-             </div>
-
-             <div class="review-item">
-              <div class="review-item__img img-mask">
-                <img class="img-content" src="img/review-img.jpg" alt="review">
-              </div>
-              <div class="review-item__info">
-                <span class="info-name">Петя.</span>
-                <span class="info-profession">Cтудентка.</span>
-                <div class="review-item__social social-icon">
-                  <a href="#" class="social-icon__item social-icon__item--inst--review"></a>
-                  <a href="#" class="social-icon__item social-icon__item--vk--review"></a>
-                </div>
-              </div>
-              <p class="rewiev-item__text">Интересные трассы, вкусная еда и самые
-               приветливые тренера!</p>
-             </div>
-
             </div>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   </section>
-</section>
   <footer class="footer">
     <div class="footer__inner">
       <div class="footer-map">
@@ -456,6 +447,7 @@
 
     </div>
   </footer>
+</main>
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/script.js"></script>
