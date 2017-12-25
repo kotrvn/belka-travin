@@ -697,8 +697,10 @@ h1, h2, p {
   margin: 5px;
 }
 
-
-.table__data  label {
+.table__data input {
+  visibility: hidden;
+}
+.table__data label {
   margin: 0;
   position: relative;
   color: #22313f;
@@ -709,14 +711,14 @@ h1, h2, p {
   box-sizing: border-box;
   display: block;
   padding: 10px;
-  border: 2px solid #960000;
+  border: 2px solid #000;
 
 }
 .table__data label:active {
   box-sizing: border-box;
   display: block;
   padding: 10px;
-  border: 2px solid #000;
+  border: 2px solid #960000;
 }
 
 .table__row--dark,
