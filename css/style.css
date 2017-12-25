@@ -20,7 +20,13 @@ h1, h2, p {
   flex-direction: column;
   
 }
+.nav__item {
+  margin-right: 31px;
+}
 
+.nav__item:last-child {
+  margin-right: 0;
+}
 .nav__link {
   box-sizing: border-box;
   display: block;
@@ -29,13 +35,16 @@ h1, h2, p {
   line-height: 24px;
   color: #22313f;
   text-decoration: none;
+  border-bottom: 1px solid transparent;
 }
 
 .nav__link:hover {
   border-bottom: 1px solid #000;
 }
 
-
+.nav__link:last-child {
+  margin-right: 0;
+}
 
 /* ==Buttons== */
 
@@ -633,12 +642,13 @@ h1, h2, p {
 .price-submit {
   margin-top: 30px;
   text-align: center;
+  
 }
 
 .price-submit .btn {
   display: block;
-  margin: 0 auto;
   width: 200px;
+  margin: 0 auto;
 }
 
 .safe-link {
@@ -659,33 +669,54 @@ h1, h2, p {
   display: block;
   font-family: Open Sans, serif;
   vertical-align: middle;
-  width: 100%;
   border-collapse: collapse;
   box-sizing: border-box;
   text-align: center;
   text-transform: uppercase;
 }
-
+.table__inner {
+  padding: 0 15px;
+}
 .table-header {
   margin-bottom: 60px;
 }
 
 .table__row {
+  height: 90px;
   empty-cells: hide;
+  box-sizing: border-box;
 
 }
 
 .table__data {
-  width: 370px;
-  padding: 30px 40px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 29%;
+  padding: 23px 33px;
+  margin: 5px;
 }
 
-.table__data input {
-  visibility: hidden;
-}
 
-.table__data input {
+.table__data  label {
+  margin: 0;
+  position: relative;
   color: #22313f;
+  padding: 10px;
+  border: 2px solid transparent;
+}
+.table__data label:hover {
+  box-sizing: border-box;
+  display: block;
+  padding: 10px;
+  border: 2px solid #960000;
+
+}
+.table__data label:active {
+  box-sizing: border-box;
+  display: block;
+  padding: 10px;
+  border: 2px solid #000;
 }
 
 .table__row--dark,
@@ -833,10 +864,6 @@ h1, h2, p {
   color: #fff;
 }
 
-.footer__inner {
-  
-}
-
 .footer-info {
   position: relative;
   padding: 0 15px 20px;
@@ -918,6 +945,11 @@ h1, h2, p {
     background-image: url(../img/header__bg@2.jpg);
     background-position: bottom;
     background-size: cover;
+    padding-top: 0;
+    padding-bottom: 300px;
+  }
+  .header .section__title {
+    margin-top: 100px;
   }
   .header__nav {
     display: flex;
@@ -947,6 +979,7 @@ h1, h2, p {
     display: inline-block;
     order: -10;
     margin-top: 10px;
+    margin-left: 15px;
   }
 
   .burger-btn {
@@ -991,8 +1024,11 @@ h1, h2, p {
   }
 
   .track-descr {
-    margin-top: 0;
-    padding: 45px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    height: 160px;
   }
 
   .price-form--mobile {display: none;}
@@ -1052,8 +1088,10 @@ h1, h2, p {
   .price-submit {
     display: flex;
     margin: 63px 0 45px;
+    justify-content: center;
   }
   .price-submit .btn {
+    margin: 0;
     margin-right: 83px;
   }
 
@@ -1073,8 +1111,23 @@ h1, h2, p {
     background-position: bottom;
     background-size: cover;
   }
-  .links--footer {
+  
+  .footer__inner {
     display: flex;
+    background-color: #22313f;
+    justify-content: space-between;
+  }
+  .to-top {
+    position: relative;
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+
+  .footer .map {
+    order: 2;
+    width: 50%;
+    height: 315px;
+    margin: 20px 45px;
   }
 }
 
@@ -1083,17 +1136,20 @@ h1, h2, p {
   .section__inner,
   .header__inner,
   .footer__inner {
-    width: 1190px;
+    width: 1280px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 45px;
   }
 
   .header__inner {
     background-image: url(../img/header__bg@3.jpg);
-    background-position: bottom;
+    background-position: top;
     background-size: cover;
+    padding-bottom: 330px;
   }
-
+  .header__inner .section__title {
+    margin-top: 130px;
+  }
   .btn--header {
     display: inline-block;
     vertical-align: top;
@@ -1105,11 +1161,13 @@ h1, h2, p {
     padding: 0;
     text-align: center;
     background-color: transparent;
+    margin-right: 45px;
   }
   .nav__list {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    margin-right: 30px;
   }
   .social-link--header {
     display: none;
@@ -1149,7 +1207,6 @@ h1, h2, p {
   
   .track-descr {
     margin-top: -3px;
-    padding: 45px 24px;
   }
 
   .galery-item {
@@ -1162,22 +1219,22 @@ h1, h2, p {
     background-position: bottom;
     background-size: cover;
   }
-  .footer__inner {
+  .table__inner {
+    margin: 0 auto;
+  }
+  .reviews-wrap {
+    margin: 0 -45px;
+  }
+
+  .links--footer {
     display: flex;
-    background-color: #22313f;
-    justify-content: space-between;
   }
-
-  .footer-info {
-   
-  }
-
   .footer .map {
-    order: 2;
     width: 60%;
     height: 415px;
     margin: 20px 45px;
   }
+
   .links--topline {
     display: flex;
   }
@@ -1190,7 +1247,7 @@ h1, h2, p {
     left: 15px;
   }
   .slick-next.slick-arrow {
-    right: : 15px;
+    right: 15px;
   }
 }
 }
