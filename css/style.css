@@ -774,7 +774,7 @@ h1, h2, p {
 .price-bg {
   background-image: url(../img/review__bg.jpg);
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: bottom;
   background-size: 100%;
 }
 .reviews-wrap {
