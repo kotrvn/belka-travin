@@ -125,7 +125,7 @@
 }
 .slick-next.slick-arrow {
     position: absolute;
-    top: 0;
+    top: 38px;
     bottom: 0;
     right: 0;
     margin: auto;
@@ -139,7 +139,7 @@
 }
 .slick-prev.slick-arrow {
     position: absolute;
-    top: 0;
+    top: 38px;
     bottom: 0;
     left: 0;
     margin: auto;
