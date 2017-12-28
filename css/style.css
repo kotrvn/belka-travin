@@ -827,6 +827,7 @@ h1, h2, p {
 
 .info-profession {
   display: block;
+  min-height: 48px;
 }
 
 .review-item__social {
@@ -878,12 +879,12 @@ h1, h2, p {
     padding-top: 40px;
     margin-left: 30px;
 }
-}
 
 .links--footer .links__phone {
-  color: #dadae7;
+  display: block;
   font-size: 16px;
   line-height: 28px;
+  color: #dadae7;
 }
 
 .links--footer .links__phone:before {
@@ -1135,16 +1136,19 @@ h1, h2, p {
     background-position: bottom;
     background-size: 100%;
   }
-  
+  .social-link--footer {
+    margin-left: 30px;
+  }
   .footer__inner {
     display: flex;
     background-color: #22313f;
     justify-content: space-between;
   }
+
   .to-top {
     position: relative;
     margin-top: 40px;
-    margin-left: 20px;
+    margin-left: 45px;
   }
 
   .footer .map {
@@ -1215,9 +1219,10 @@ h1, h2, p {
   .nav__link {
     border-bottom: 1px solid transparent;
   }
-
+  
+  .
   .nav__link:hover {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #fff;
   }
 
   .nav__link:last-child {
@@ -1225,6 +1230,9 @@ h1, h2, p {
   }
   .social-link--header {
     display: none;
+  }
+  .social-link--footer {
+    margin-left: 30px;
   }
   .promo__text {
     display: block;
@@ -1332,6 +1340,9 @@ h1, h2, p {
   .reviews-wrap {
     margin: 0 -45px;
   }
+  .review-item__social {
+    margin-top: 0;
+  }
   .slick-prev.slick-arrow {
     left: -10px;
   }
@@ -1351,6 +1362,7 @@ h1, h2, p {
   .to-top {
     position: relative;
     margin-top: 60px;
+    margin-left: 65px;
   }
   .slick-prev.slick-arrow {
     left: 15px;
