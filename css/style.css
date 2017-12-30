@@ -18,7 +18,6 @@ h1, h2, p {
 .nav__list {
   display: flex;
   flex-direction: column;
-  
 }
 
 
@@ -876,7 +875,7 @@ h1, h2, p {
 }
 
 .links--footer {
-    padding-top: 40px;
+    padding-top: 20px;
     margin-left: 30px;
 }
 
@@ -909,23 +908,23 @@ h1, h2, p {
 
 .nav--footer .nav__list {
   flex-direction: column;
-  margin-bottom: 17px;
-  font-size: 14px;
-  color: #dadae7;
   align-items: flex-start;
-  margin-left: 30px;
-  text-transform: uppercase;
+  margin-bottom: 17px;
+  margin-left: 10px;
   padding: 10px;
+  color: #dadae7;
+  text-transform: uppercase;
   font-size: 18px;
   line-height: 20px;
 }
-.nav--footer .nav__list:hover {
-  border-color: #fff;
-}
+
 .nav--footer .nav__link {
   color: #dadae7;
 }
 
+.nav--footer.nav__list:hover:after {
+  background-color: #dadae7;
+}
 .social-link--footer .social-link__item{
   margin-right: 10px;
 }
@@ -1035,12 +1034,15 @@ h1, h2, p {
     padding-bottom: 120px;
     
   }
-  .track-slider .slick__item:nth-child(even) .track-header,
+  nth-child(even) .track-header,
   .track-slider .slick__item:nth-child(even) .track-descr {
+    
+  }
+  .slick__item:hover .track-header,
+  .slick__item:hover .track-descr {
     background-color: #22313f;
     opacity: 1;
   }
-
   .track-header {
     margin-bottom: 0;
   }
@@ -1186,6 +1188,7 @@ h1, h2, p {
     vertical-align: top;
     margin-top: 22px;
     margin-left: 18px;
+    z-index: 2;
   }
   .promo__title {
     padding-top: 95px;
@@ -1215,13 +1218,19 @@ h1, h2, p {
   .nav__item:last-child {
     margin-right: 0;
   }
-  .nav__link {
-    border-bottom: 1px solid transparent;
+  .nav__link:after {
+    content: '';  
+    display: block;
+    margin: 5px auto;
+    width: 15px;
+    height: 2px;
+    background-color: transparent;
+    transition: all .3s ease;
+    
   }
   
-  .
-  .nav__link:hover {
-    border-bottom: 1px solid #fff;
+  .nav__link:hover:after {
+    background-color: #000;
   }
 
   .nav__link:last-child {
@@ -1361,7 +1370,6 @@ h1, h2, p {
   .to-top {
     position: relative;
     margin-top: 60px;
-    margin-left: 65px;
   }
   .slick-prev.slick-arrow {
     left: 15px;
@@ -1370,5 +1378,5 @@ h1, h2, p {
     right: 15px;
   }
 }
-}
+
 
